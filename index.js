@@ -17,15 +17,10 @@ module.exports = function(options) {
     try { compiled = Emblem.precompile(Handlebars, contents, compilerOptions).toString(); }
     catch (err) { this.emit('error', err); }
     if (compiled) {
+      compiled = 'Handlebars.template('+compiled+')';
       file.contents = new Buffer(compiled);
       file.path = gutil.replaceExtension(file.path, '.js');
-      file.defineModuleOptions = {
-        require: { Handlebars: 'handlebars' },
-        context: {
-          handlebars: "Handlebars.template(<%= contents %>)"
-        },
-        wrapper: "<%= handlebars %>"
-      };
+
       this.queue(file);
     }
   });
