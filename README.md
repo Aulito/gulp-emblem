@@ -1,3 +1,11 @@
+# UNMAINTAINED
+
+We strongly advise against installing this addon in its current form.
+
+The original authors have abandoned this project. If you're interested in continuing it, open an issue and we'll add you as a maintainer.
+
+---
+
 # gulp-emblem [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url]
 > [Emblem.js][emblem-url] plugin for gulp
 > ...a concise, beautiful, and fully compatible templating alternative for Handlebars.js.
